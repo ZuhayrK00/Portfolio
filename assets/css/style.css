@@ -164,16 +164,45 @@ input {
 }
 
 .nav__link {
+    float: right;
     height: 100%;
     line-height: 100px;
     padding: 0 1rem;
     color: var(--title-color);
     font-weight: var(--font-medium);
     position: relative;
+    transform: -4s;
+}
+
+.btn__share {
+    position: absolute;
+    bottom: 1.8rem;
+    left: 0;
+    right: 0;
+    text-align: center;
+}
+
+.social__share {
+    font-size: 1.5rem;
 }
 
 /* Active Link */
+.nav__link.active-link, .nav__link:hover {
+    color: var(--skin-color);
+}
 
+.nav__link.active-link::after, .nav__link:hover::after {
+    position: absolute;
+    content: '';
+    width: 6px;
+    height: 6px;
+    background-color: var(--skin-color);
+    border-radius: 50%;
+    bottom: 1.8rem;
+    left: 0;
+    right: 0;
+    margin: auto;
+}
 
 /*=============== MAIN ===============*/
 
