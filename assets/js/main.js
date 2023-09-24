@@ -1,21 +1,34 @@
 /*=============== SHOW SIDEBAR ===============*/
-const navMenu = document.getElementById("sidebar"),
-  navToggle = document.getElementById("nav-toggle"),
-  navClose = document.getElementById("nav-close");
+const navMenu = document.getElementById("sidebar");
+const navToggle = document.getElementById("nav-toggle");
+const navClose = document.getElementById("nav-close");
+
+function closeSidebar() {
+  navMenu.classList.remove('show-sidebar');
+}
+
 /*===== SIDEBAR SHOW =====*/
 /* Validate If Constant Exists */
 if(navToggle){
     navToggle.addEventListener("click", () => {
       navMenu.classList.add('show-sidebar');
-    })
+    });
 }
+
 /*===== SIDEBAR HIDDEN =====*/
 /* Validate If Constant Exists */
 if(navClose){
     navClose.addEventListener("click", () => {
       navMenu.classList.remove('show-sidebar');
-    })
+    });
 }
+
+const navLinks = document.querySelectorAll('.nav__link');
+
+navLinks.forEach((link) => {
+  link.addEventListener('click', closeSidebar);
+});
+
 /*=============== SKILLS TABS ===============*/
 const tabs = document.querySelectorAll("[data-target]"),
   tabContent = document.querySelectorAll("[data-content]");
