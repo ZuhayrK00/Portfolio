@@ -4,29 +4,29 @@ const navToggle = document.getElementById("nav-toggle");
 const navClose = document.getElementById("nav-close");
 
 function closeSidebar() {
-  navMenu.classList.remove('show-sidebar');
+  navMenu.classList.remove("show-sidebar");
 }
 
 /*===== SIDEBAR SHOW =====*/
 /* Validate If Constant Exists */
-if(navToggle){
-    navToggle.addEventListener("click", () => {
-      navMenu.classList.add('show-sidebar');
-    });
+if (navToggle) {
+  navToggle.addEventListener("click", () => {
+    navMenu.classList.add("show-sidebar");
+  });
 }
 
 /*===== SIDEBAR HIDDEN =====*/
 /* Validate If Constant Exists */
-if(navClose){
-    navClose.addEventListener("click", () => {
-      navMenu.classList.remove('show-sidebar');
-    });
+if (navClose) {
+  navClose.addEventListener("click", () => {
+    navMenu.classList.remove("show-sidebar");
+  });
 }
 
-const navLinks = document.querySelectorAll('.nav__link');
+const navLinks = document.querySelectorAll(".nav__link");
 
 navLinks.forEach((link) => {
-  link.addEventListener('click', closeSidebar);
+  link.addEventListener("click", closeSidebar);
 });
 
 /*=============== SKILLS TABS ===============*/
@@ -94,10 +94,6 @@ function portfolioItemDetails(portfolioItem) {
     portfolioItem.querySelector(".portfolio__item-details").innerHTML;
 }
 
-/*=============== SERVICES MODAL ===============*/
-
-/*=============== SWIPER TESTIMONIAL ===============*/
-
 /*=============== INPUT ANIMATION ===============*/
 const inputs = document.querySelectorAll(".input");
 
@@ -142,5 +138,3 @@ function navHighlighter() {
     }
   });
 }
-
-/*=============== SHOW SCROLL UP ===============*/
