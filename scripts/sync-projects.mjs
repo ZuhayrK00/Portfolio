@@ -1,0 +1,33 @@
+import { execFileSync } from "node:child_process";
+import { mkdirSync, writeFileSync } from "node:fs";
+
+// Only public repositories are ever included in the portfolio.
+const repos = JSON.parse(
+  execFileSync(
+    "gh",
+    [
+      "repo",
+      "list",
+      "ZuhayrK00",
+      "--limit",
+      "200",
+      "--json",
+      "name,description,url,isPrivate,isFork,primaryLanguage",
+    ],
+    { encoding: "utf8" },
+  ),
+);
+const publicRepos = repos
+  .filter((repo) => !repo.isPrivate && !repo.isFork)
+  .map((repo) => ({
+    name: repo.name,
+    description: repo.description || "A project from my development journey.",
+    url: repo.url,
+    language: repo.primaryLanguage?.name || "Experiment",
+  }));
+mkdirSync("src/data", { recursive: true });
+writeFileSync(
+  "src/data/repositories.json",
+  JSON.stringify(publicRepos, null, 2) + "\n",
+);
+console.log(`Saved ${publicRepos.length} public repositories.`);

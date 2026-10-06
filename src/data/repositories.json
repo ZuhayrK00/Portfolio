@@ -1,0 +1,194 @@
+[
+  {
+    "name": "baizebook",
+    "description": "BaizeBook — native snooker scoring for iPhone, iPad and Apple Watch. App source and support site in one place. Local data, no accounts, no backend.",
+    "url": "https://github.com/ZuhayrK00/baizebook",
+    "language": "Swift"
+  },
+  {
+    "name": "Shift",
+    "description": "Shift — a modern, offline-first workout tracker for iOS and Apple Watch. Log workouts, build plans, track progress, and generate AI-powered programs — all built with SwiftUI. (Work in progress)",
+    "url": "https://github.com/ZuhayrK00/Shift",
+    "language": "Swift"
+  },
+  {
+    "name": "test",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/test",
+    "language": "JavaScript"
+  },
+  {
+    "name": "Portfolio",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Portfolio",
+    "language": "HTML"
+  },
+  {
+    "name": "unit-and-integration-testing-pda",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/unit-and-integration-testing-pda",
+    "language": "JavaScript"
+  },
+  {
+    "name": "static-and-dynamic-testing-pda",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/static-and-dynamic-testing-pda",
+    "language": "Python"
+  },
+  {
+    "name": "Capstone",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Capstone",
+    "language": "JavaScript"
+  },
+  {
+    "name": "FantasyAdventure",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/FantasyAdventure",
+    "language": "Java"
+  },
+  {
+    "name": "codeclanTowers",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/codeclanTowers",
+    "language": "Java"
+  },
+  {
+    "name": "inheritanceLab",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/inheritanceLab",
+    "language": "Java"
+  },
+  {
+    "name": "Wk12Day2HW",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Wk12Day2HW",
+    "language": "Java"
+  },
+  {
+    "name": "Week12Day1HW",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Week12Day1HW",
+    "language": "Java"
+  },
+  {
+    "name": "PlayStationShop",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/PlayStationShop",
+    "language": "JavaScript"
+  },
+  {
+    "name": "React_testing_lab",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/React_testing_lab",
+    "language": "JavaScript"
+  },
+  {
+    "name": "Week8Day1Lab",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Week8Day1Lab",
+    "language": "JavaScript"
+  },
+  {
+    "name": "CountryLab",
+    "description": "Week7 Day4 Country lab using React",
+    "url": "https://github.com/ZuhayrK00/CountryLab",
+    "language": "JavaScript"
+  },
+  {
+    "name": "FilmLabWeek7",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/FilmLabWeek7",
+    "language": "JavaScript"
+  },
+  {
+    "name": "Week6Day4Lab",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Week6Day4Lab",
+    "language": "JavaScript"
+  },
+  {
+    "name": "SoloProject",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/SoloProject",
+    "language": "Python"
+  },
+  {
+    "name": "MusicLab",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/MusicLab",
+    "language": "Python"
+  },
+  {
+    "name": "Week3Day5HW",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Week3Day5HW",
+    "language": "Python"
+  },
+  {
+    "name": "Wk3Day3Lab",
+    "description": "Intro into Flask Models",
+    "url": "https://github.com/ZuhayrK00/Wk3Day3Lab",
+    "language": "Python"
+  },
+  {
+    "name": "Week3Day1HW",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Week3Day1HW",
+    "language": "HTML"
+  },
+  {
+    "name": "codeclan_caraoke",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/codeclan_caraoke",
+    "language": "Python"
+  },
+  {
+    "name": "Wk2D2HW",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Wk2D2HW",
+    "language": "Experiment"
+  },
+  {
+    "name": "Wk2D1HW",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Wk2D1HW",
+    "language": "Python"
+  },
+  {
+    "name": "wk1day5_homework",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/wk1day5_homework",
+    "language": "Python"
+  },
+  {
+    "name": "wk1day4_lab",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/wk1day4_lab",
+    "language": "Python"
+  },
+  {
+    "name": "wk1day3lab",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/wk1day3lab",
+    "language": "Python"
+  },
+  {
+    "name": "week1day3_lab",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/week1day3_lab",
+    "language": "Experiment"
+  },
+  {
+    "name": "Week1_day2_hw",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Week1_day2_hw",
+    "language": "Python"
+  },
+  {
+    "name": "precourse_recap",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/precourse_recap",
+    "language": "Python"
+  }
+]
