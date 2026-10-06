@@ -50,11 +50,11 @@ Only public, non-fork repositories are saved. Passport Pursuit (`SoloProject`) a
 
 The Systems experiment is a **browser simulation**, and Intelligence is **local keyword search**, not an LLM. Neither sends data off-device. Shift is the featured project containing actual on-device AI. Contact uses email links and copy-to-clipboard; there is no message-storage service or fake form submission.
 
-## Deployment after review
+## Deployment
 
-The redesign is on `redesign/creative-engineering`; the existing site's branch and history are preserved. Local review comes before publication.
+The portfolio is published at **https://zuhayrk00.github.io/Portfolio/** using GitHub Pages. The reviewed redesign is on `main`; `redesign/creative-engineering` preserves the development branch.
 
-The production build is static in `dist/`, with relative asset paths, and works on GitHub Pages or Vercel. A manual GitHub Pages workflow is included. After merging the approved redesign, select **GitHub Actions** as the repository's Pages source, then run **Deploy portfolio to GitHub Pages** from Actions. The workflow itself does not run on push.
+The production build is static in `dist/`, with relative asset paths. The repository's Pages source is **GitHub Actions**. To publish updates, push the reviewed changes to `main`, then run **Deploy portfolio to GitHub Pages** from Actions on `main` (or `gh workflow run pages.yml --ref main`). The workflow is manual and does not run on push.
 
 For Vercel, use the Vite preset, `npm run build`, and output directory `dist`.
 
