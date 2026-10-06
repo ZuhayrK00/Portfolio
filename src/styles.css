@@ -854,14 +854,6 @@ h2 .serif {
   background: #f0c881;
   color: #514025;
 }
-.art-passport {
-  background: #c7dae0;
-  color: #384e55;
-}
-.art-copia {
-  background: #d4d8bf;
-  color: #414a32;
-}
 .browser-mock {
   position: absolute;
   width: 82%;
@@ -898,9 +890,6 @@ h2 .serif {
   object-fit: cover;
   object-position: top;
   max-height: 207px;
-}
-.art-passport .browser-mock {
-  transform: rotate(3deg);
 }
 .project-open:hover .browser-mock {
   transform: rotate(0) translateY(-8px);
@@ -1612,6 +1601,30 @@ h2 .serif {
 .footer-links {
   display: flex;
   gap: 25px;
+  flex-wrap: wrap;
+  row-gap: 12px;
+}
+.social-x {
+  font-size: 15px;
+  line-height: 1;
+}
+.project-store-link {
+  display: inline-flex;
+  align-items: center;
+  gap: 8px;
+  font-size: 11px;
+  margin-top: 15px;
+  padding-block: 5px;
+}
+.project-store-link > span {
+  width: 5px;
+  height: 5px;
+  border-radius: 50%;
+  background: #90ab50;
+}
+.project-store-link:hover {
+  text-decoration: underline;
+  text-underline-offset: 4px;
 }
 .footer-links > a {
   font-size: 11px;

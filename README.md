@@ -1,6 +1,6 @@
 # Zuhayr Khan — Portfolio
 
-A personal portfolio built with React, TypeScript, Vite, Three.js, and Motion. Warm editorial design, a live WebGL sculpture, six project stories, a searchable public repository archive, and interactive engineering experiments.
+A personal portfolio built with React, TypeScript, Vite, Three.js, and Motion. Warm editorial design, a live WebGL sculpture, four project stories, a searchable public repository archive, and interactive engineering experiments.
 
 ## Run locally
 
@@ -20,7 +20,7 @@ npm run preview   # Serve the production output locally
 
 ## Make it yours
 
-- **Name, email, GitHub, LinkedIn, employer and featured project stories:** `src/data/portfolio.ts`.
+- **Name, email, GitHub, LinkedIn, X, employer and featured project stories:** `src/data/portfolio.ts`.
 - **Main page copy and composition:** `src/App.tsx`.
 - **Colours, typography, layouts and responsive breakpoints:** `src/styles.css`.
 - **3D sculpture:** `src/components/Sculpture.tsx`.
@@ -28,7 +28,7 @@ npm run preview   # Serve the production output locally
 - **Project artwork and avatar:** `public/images/`.
 - **Page title and search/social description:** `index.html`.
 
-The project copy uses public GitHub descriptions and the previous portfolio as its sources. The professional experience, impact figures, skills, education, location, and LinkedIn link were updated from the CV supplied by Zuhayr on 6 October 2026. The portrait was supplied for use on the site. The original CV and phone number are not bundled in the public site. Treat the first-person editorial copy as a draft for review. Project roles do not claim particular contributions to group projects. BaizeBook's review status and Shift's development status reflect repository documentation read on 6 October 2026; update these as releases change.
+The project copy uses public GitHub descriptions and the previous portfolio as its sources. The professional experience, impact figures, skills, education, location, and LinkedIn link were updated from the CV supplied by Zuhayr on 6 October 2026. The portrait was supplied for use on the site. The original CV and phone number are not bundled in the public site. Treat the first-person editorial copy as a draft for review. Project roles do not claim particular contributions to group projects. BaizeBook and Shift are available on the App Store, confirmed by Zuhayr and their live Apple listings. Their project cards and case studies link directly to the store.
 
 The repository archive is a committed snapshot. Refresh it with an authenticated GitHub CLI:
 
@@ -36,14 +36,14 @@ The repository archive is a committed snapshot. Refresh it with an authenticated
 npm run sync:projects
 ```
 
-Only public, non-fork repositories are saved. Private repository data and credentials are never included. The original collaborative projects are also featured separately.
+Only public, non-fork repositories are saved. Passport Pursuit (`SoloProject`) and Copia (`shares_project`) are intentionally excluded from the site; the sync script preserves these exclusions and the updated app release descriptions. Private repository data and credentials are never included. The original collaborative projects are also featured separately.
 
 ## Interactions
 
 - New visitors start in dark mode. The header's sun/moon button switches themes and remembers the choice locally. The theme is applied before the first paint; storage restrictions do not break the control.
 - Move the pointer over the sculpture; change its colour using the three dots.
 - Filter projects, open their case studies, and follow real source links.
-- Search all public repositories in the project archive.
+- Search the included public repositories in the project archive.
 - Open quick navigation with **⌘K / Ctrl+K**. Use Tab/Enter to choose and Escape to close.
 - In the playground, adjust the card's colour/radius, follow a simulated backend request, or search project notes.
 - Use the footer's motion control to pause decorative animation. Operating-system reduced-motion preferences are respected automatically.

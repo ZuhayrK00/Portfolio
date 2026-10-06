@@ -1,13 +1,19 @@
 [
   {
+    "name": "Portfolio",
+    "description": "A project from my development journey.",
+    "url": "https://github.com/ZuhayrK00/Portfolio",
+    "language": "HTML"
+  },
+  {
     "name": "baizebook",
-    "description": "BaizeBook — native snooker scoring for iPhone, iPad and Apple Watch. App source and support site in one place. Local data, no accounts, no backend.",
+    "description": "BaizeBook — native snooker scoring for iPhone, iPad and Apple Watch. Local data, no accounts, no backend. Available on the App Store.",
     "url": "https://github.com/ZuhayrK00/baizebook",
     "language": "Swift"
   },
   {
     "name": "Shift",
-    "description": "Shift — a modern, offline-first workout tracker for iOS and Apple Watch. Log workouts, build plans, track progress, and generate AI-powered programs — all built with SwiftUI. (Work in progress)",
+    "description": "Shift — an offline-first workout tracker for iOS and Apple Watch. Log workouts, build plans, track progress, and generate on-device AI programs. Available on the App Store.",
     "url": "https://github.com/ZuhayrK00/Shift",
     "language": "Swift"
   },
@@ -16,12 +22,6 @@
     "description": "A project from my development journey.",
     "url": "https://github.com/ZuhayrK00/test",
     "language": "JavaScript"
-  },
-  {
-    "name": "Portfolio",
-    "description": "A project from my development journey.",
-    "url": "https://github.com/ZuhayrK00/Portfolio",
-    "language": "HTML"
   },
   {
     "name": "unit-and-integration-testing-pda",
@@ -106,12 +106,6 @@
     "description": "A project from my development journey.",
     "url": "https://github.com/ZuhayrK00/Week6Day4Lab",
     "language": "JavaScript"
-  },
-  {
-    "name": "SoloProject",
-    "description": "A project from my development journey.",
-    "url": "https://github.com/ZuhayrK00/SoloProject",
-    "language": "Python"
   },
   {
     "name": "MusicLab",

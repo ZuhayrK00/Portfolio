@@ -81,11 +81,7 @@ function ProjectArt({ project }: { project: Project }) {
               ? "↗ shift"
               : id === "sketchwars"
                 ? "SketchWars"
-                : id === "passport"
-                  ? "Passport Pursuit"
-                  : id === "copia"
-                    ? "copia."
-                    : "zk."}
+                : "zk."}
         </span>
         <span>
           {id === "baizebook" || id === "shift"
@@ -153,13 +149,7 @@ function ProjectArt({ project }: { project: Project }) {
               <i />
               <i />
               <i />
-              <span>
-                {id === "sketchwars"
-                  ? "Good times, drawn together."
-                  : id === "passport"
-                    ? "Your next adventure starts here."
-                    : "A little clarity goes a long way."}
-              </span>
+              <span>Good times, drawn together.</span>
             </div>
             <img loading="lazy" src={image(`${id}.png`)} alt="" />
           </div>
@@ -252,7 +242,7 @@ function Archive({ close }: { close: () => void }) {
           The project archive<span className="lime-dot">.</span>
         </h2>
         <p>
-          Experiments, early lessons, and things I’ve built along the way. All{" "}
+          Experiments, early lessons, and things I’ve built along the way.{" "}
           {repositories.length} public repositories, plus the collaborative
           projects in selected work.
         </p>
@@ -710,6 +700,19 @@ export default function App() {
                       </div>
                     </div>
                   </button>
+                  {project.url?.startsWith("https://apps.apple.com/") && (
+                    <a
+                      className="project-store-link"
+                      href={project.url}
+                      target="_blank"
+                      rel="noreferrer"
+                      aria-label={`Get ${project.name} on the App Store`}
+                    >
+                      <span aria-hidden="true" />
+                      Available on the App Store
+                      <ArrowUpRight size={14} />
+                    </a>
+                  )}
                 </motion.article>
               ))}
             </AnimatePresence>
@@ -1002,6 +1005,18 @@ export default function App() {
           <a href={profile.linkedin} target="_blank" rel="noreferrer">
             <Linkedin size={15} />
             LinkedIn
+            <ArrowUpRight size={13} />
+          </a>
+          <a
+            href={profile.x}
+            target="_blank"
+            rel="noreferrer"
+            aria-label="X — @zuhayr_dev"
+          >
+            <span className="social-x" aria-hidden="true">
+              𝕏
+            </span>
+            X
             <ArrowUpRight size={13} />
           </a>
           <a href={`mailto:${profile.email}`}>

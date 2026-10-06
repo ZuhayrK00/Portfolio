@@ -100,7 +100,7 @@ export default function Lab({
     setAnswer(
       ranked.length
         ? `Here’s what I found in Zuhayr’s work. ${ranked[0].project.description}`
-        : "Try asking about AI, SwiftUI, realtime games, React, or Python. I search the project notes on this site, so I only know what’s in them.",
+        : "Try asking about AI, SwiftUI, realtime games, React, or native apps. I search the project notes on this site, so I only know what’s in them.",
     );
   };
   return (
@@ -316,7 +316,7 @@ export default function Lab({
                               ? "> Reading project records…"
                               : stage === 3
                                 ? "> Serialising response…"
-                                : "> 200 OK · 6 projects returned · simulation complete"}
+                                : `> 200 OK · ${projects.length} projects returned · simulation complete`}
                     </span>
                   </div>
                   <button
@@ -377,7 +377,7 @@ export default function Lab({
                     </button>
                   </form>
                   <div className="prompt-chips">
-                    {["AI projects", "Realtime games", "Python backend"].map(
+                    {["AI projects", "Realtime games", "Native apps"].map(
                       (q) => (
                         <button key={q} onClick={() => ask(q)}>
                           {q}
