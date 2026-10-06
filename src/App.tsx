@@ -20,13 +20,22 @@ import {
   Link as Linkedin,
   Mail,
   Menu,
+  Moon,
   Pause,
   Play,
   Search,
   Sparkles,
+  Sun,
   X,
 } from "lucide-react";
-import { filters, profile, projects, type Project } from "./data/portfolio";
+import {
+  education,
+  experience,
+  filters,
+  profile,
+  projects,
+  type Project,
+} from "./data/portfolio";
 import repositories from "./data/repositories.json";
 import Modal from "./components/Modal";
 import Lab from "./components/Lab";
@@ -352,6 +361,9 @@ function CommandMenu({
 
 export default function App() {
   const reduceMotion = useReducedMotion();
+  const [theme, setTheme] = useState<"dark" | "light">(() =>
+    document.documentElement.dataset.theme === "light" ? "light" : "dark",
+  );
   const [paused, setPaused] = useState(false);
   const [mode, setMode] = useState(0);
   const [filter, setFilter] = useState("All work");
@@ -365,6 +377,17 @@ export default function App() {
   const { scrollYProgress } = useScroll();
   const scaleX = useSpring(scrollYProgress, { stiffness: 120, damping: 25 });
   const motionOff = paused || !!reduceMotion;
+  useEffect(() => {
+    document.documentElement.dataset.theme = theme;
+    document
+      .querySelector('meta[name="theme-color"]')
+      ?.setAttribute("content", theme === "dark" ? "#151813" : "#f4f3ed");
+    try {
+      localStorage.setItem("zk-theme", theme);
+    } catch {
+      /* Keep the toggle usable without storage. */
+    }
+  }, [theme]);
   useEffect(() => {
     const update = () =>
       setTime(
@@ -429,6 +452,14 @@ export default function App() {
         </nav>
         <div className="header-actions">
           <button
+            className="theme-toggle icon-button"
+            aria-label={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            title={`Switch to ${theme === "dark" ? "light" : "dark"} mode`}
+            onClick={() => setTheme(theme === "dark" ? "light" : "dark")}
+          >
+            {theme === "dark" ? <Sun size={18} /> : <Moon size={18} />}
+          </button>
+          <button
             className="command-trigger"
             aria-label="Open quick navigation"
             onClick={() => setCommand(true)}
@@ -472,7 +503,7 @@ export default function App() {
         <section className="hero" id="home">
           <div className="hero-top">
             <span className="status-label">
-              <i /> FULL-STACK ENGINEER. FULL-TIME CURIOUS.
+              <i /> AI-NATIVE ENGINEER. FULL-TIME CURIOUS.
             </span>
             <span className="edition">PERSONAL PORTFOLIO / VOL. 02</span>
           </div>
@@ -503,10 +534,11 @@ export default function App() {
                 animate={{ opacity: 1, y: 0 }}
                 transition={{ delay: 0.2, duration: 0.7 }}
               >
-                I turn complex problems into things that feel simple.
-                <br className="desktop-break" /> From the first pixel to the
-                last API call —<br className="desktop-break" /> with a little AI
-                in the mix.
+                I build products end to end, with AI in the workflow.
+                <br className="desktop-break" /> Thoughtful interfaces. Solid
+                systems.
+                <br className="desktop-break" /> Agents that make the work
+                better.
               </motion.p>
               <motion.div
                 className="hero-buttons"
@@ -571,7 +603,7 @@ export default function App() {
           <div className="hero-footer">
             <div>
               <Globe2 size={15} />
-              <span>BASED IN THE UK</span>
+              <span>BASED IN {profile.location.toUpperCase()}</span>
               <i />
               <span>{time} LOCAL TIME</span>
             </div>
@@ -715,8 +747,10 @@ export default function App() {
           <div className="about-grid">
             <Reveal className="about-portrait">
               <img
-                src={image("avatar.jpg")}
-                alt="Zuhayr’s illustrated avatar waving hello"
+                src={image("zuhayr.jpg")}
+                alt="Zuhayr Khan wearing a black suit and sunglasses"
+                width="1165"
+                height="1165"
                 loading="lazy"
               />
               <div className="portrait-caption">
@@ -735,29 +769,29 @@ export default function App() {
                 <br />I love making them <span>feel right.</span>
               </p>
               <p>
-                I’m Zuhayr, a full-stack software engineer based in the UK,
+                I’m Zuhayr, an AI-native full-stack engineer based in Glasgow,
                 currently building at{" "}
                 <a href={profile.companyUrl} target="_blank" rel="noreferrer">
                   Nudj <ArrowUpRight size={14} />
                 </a>
-                . My happy place sits somewhere between a well-designed
-                interface, a neatly solved problem, and an idea I haven’t tried
-                yet.
+                . I started in frontend at Cub3, then moved across the whole
+                stack — shipping products from the data model to the final
+                pixel.
               </p>
               <p>
-                My journey has taken me from Python and Java to React, native
-                Apple apps, and on-device AI. Different tools, same curiosity:
-                how can this be simpler, more useful, or a little more
-                delightful?
+                I’ve worked with coding agents from the early days of Cursor
+                through to Claude Code, helping shape how my team uses them and
+                building review agents of my own. Next up: taking agentic
+                engineering further into the products we build.
               </p>
               <div className="about-facts">
                 <div>
                   <span>THE APPROACH</span>
-                  <p>Think deeply. Build thoughtfully.</p>
+                  <p>AI-assisted. Engineering-led.</p>
                 </div>
                 <div>
-                  <span>THE FUEL</span>
-                  <p>Curiosity & a good problem.</p>
+                  <span>BEYOND THE DAY JOB</span>
+                  <p>Native apps & on-device AI.</p>
                 </div>
               </div>
               <a
@@ -778,21 +812,32 @@ export default function App() {
                 title: "The experience",
                 icon: Code2,
                 copy: "Interfaces that are as thoughtful as they are functional.",
-                stack: "React · TypeScript · SwiftUI · CSS",
+                stack:
+                  "React · Next.js · TypeScript · SwiftUI · Tailwind · React Three Fiber",
               },
               {
                 number: "02",
                 title: "The engine",
                 icon: Command,
                 copy: "The logic, data, and connections that make it all work.",
-                stack: "Python · Node.js · Java · SQL",
+                stack:
+                  "Node.js · tRPC · Zod · PostgreSQL · Supabase · MongoDB · OAuth 2.0",
               },
               {
                 number: "03",
                 title: "The possibility",
                 icon: Sparkles,
                 copy: "Useful intelligence. Thoughtfully woven into real products.",
-                stack: "Foundation Models · On-device AI",
+                stack:
+                  "Vercel AI SDK · MCP · Claude Code · Custom agents · Foundation Models",
+              },
+              {
+                number: "04",
+                title: "The confidence",
+                icon: Check,
+                copy: "Tested, observed, and ready for the real world.",
+                stack:
+                  "Playwright · Vitest · GitHub Actions · Vercel · Turborepo · PostHog",
               },
             ].map((item) => (
               <Reveal className="capability" key={item.number}>
@@ -805,6 +850,89 @@ export default function App() {
                 <span className="capability-stack">{item.stack}</span>
               </Reveal>
             ))}
+          </div>
+          <div className="experience-section" id="experience">
+            <Reveal>
+              <div className="experience-heading">
+                <div>
+                  <p className="eyebrow">THE WORK BEHIND THE WORK</p>
+                  <h3>
+                    From interfaces to{" "}
+                    <span className="serif">everything.</span>
+                  </h3>
+                </div>
+                <span className="experience-caption">
+                  PROFESSIONAL EXPERIENCE
+                </span>
+              </div>
+              <div
+                className="career-metrics"
+                aria-label="Engineering contributions at Nudj"
+              >
+                <div>
+                  <strong>
+                    560<span>+</span>
+                  </strong>
+                  <p>Merged pull requests at Nudj</p>
+                </div>
+                <div>
+                  <strong>12</strong>
+                  <p>Services across the monorepo</p>
+                </div>
+                <div>
+                  <strong>17</strong>
+                  <p>Agents in my PR review system</p>
+                </div>
+              </div>
+            </Reveal>
+            <div className="career-timeline">
+              {experience.map((job) => (
+                <Reveal className="career-role" key={job.company}>
+                  <div className="career-date">
+                    <span
+                      className={
+                        job.current ? "career-dot current" : "career-dot"
+                      }
+                    />
+                    {job.period}
+                    {job.current && (
+                      <span className="current-label">CURRENTLY BUILDING</span>
+                    )}
+                  </div>
+                  <div className="career-description">
+                    <h4>
+                      {job.company}
+                      <span>{job.role}</span>
+                    </h4>
+                    <p>{job.summary}</p>
+                    <ul>
+                      {job.highlights.map((item) => (
+                        <li key={item.title}>
+                          <strong>{item.title}.</strong> {item.detail}
+                        </li>
+                      ))}
+                    </ul>
+                    <div className="tags">
+                      {job.tags.map((tag) => (
+                        <span key={tag}>{tag}</span>
+                      ))}
+                    </div>
+                  </div>
+                </Reveal>
+              ))}
+            </div>
+            <Reveal className="education">
+              <p className="eyebrow">WHERE IT STARTED</p>
+              <div>
+                {education.map((item) => (
+                  <div key={item.institution}>
+                    <span>{item.date}</span>
+                    <h4>{item.name}</h4>
+                    <p>{item.institution}</p>
+                  </div>
+                ))}
+              </div>
+            </Reveal>
           </div>
         </section>
         <section id="contact" className="contact-section section-space">

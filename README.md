@@ -28,7 +28,7 @@ npm run preview   # Serve the production output locally
 - **Project artwork and avatar:** `public/images/`.
 - **Page title and search/social description:** `index.html`.
 
-The copy uses public GitHub project descriptions and the previous portfolio as its sources. Treat the first-person editorial copy as a draft for review. Project roles do not claim particular contributions to group projects. BaizeBook's review status and Shift's development status reflect repository documentation read on 6 October 2026; update these as releases change.
+The project copy uses public GitHub descriptions and the previous portfolio as its sources. The professional experience, impact figures, skills, education, location, and LinkedIn link were updated from the CV supplied by Zuhayr on 6 October 2026. The portrait was supplied for use on the site. The original CV and phone number are not bundled in the public site. Treat the first-person editorial copy as a draft for review. Project roles do not claim particular contributions to group projects. BaizeBook's review status and Shift's development status reflect repository documentation read on 6 October 2026; update these as releases change.
 
 The repository archive is a committed snapshot. Refresh it with an authenticated GitHub CLI:
 
@@ -40,6 +40,7 @@ Only public, non-fork repositories are saved. Private repository data and creden
 
 ## Interactions
 
+- New visitors start in dark mode. The header's sun/moon button switches themes and remembers the choice locally. The theme is applied before the first paint; storage restrictions do not break the control.
 - Move the pointer over the sculpture; change its colour using the three dots.
 - Filter projects, open their case studies, and follow real source links.
 - Search all public repositories in the project archive.

@@ -1,9 +1,21 @@
 <!doctype html>
-<html lang="en">
+<html lang="en" data-theme="dark">
   <head>
     <meta charset="UTF-8" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0" />
-    <meta name="theme-color" content="#f4f3ed" />
+    <meta name="theme-color" content="#151813" />
+    <script>
+      // Apply the saved choice before the first paint; new visitors start in dark.
+      try {
+        const saved = localStorage.getItem("zk-theme");
+        const theme = saved === "light" ? "light" : "dark";
+        document.documentElement.dataset.theme = theme;
+        document.querySelector('meta[name="theme-color"]').content =
+          theme === "dark" ? "#151813" : "#f4f3ed";
+      } catch {
+        /* Dark remains the default when storage is unavailable. */
+      }
+    </script>
     <meta
       name="description"
       content="Zuhayr Khan — full-stack software engineer building thoughtful web experiences, native apps, and useful AI. Explore the work, the process, and the experiments."

@@ -2,11 +2,80 @@ export const profile = {
   name: "Zuhayr Khan",
   email: "zuhayrk00@gmail.com",
   github: "https://github.com/ZuhayrK00",
-  linkedin: "https://www.linkedin.com/in/zuhayr-khan-51136a285",
-  location: "United Kingdom",
+  linkedin: "https://www.linkedin.com/in/zuhayr-k",
+  location: "Glasgow, UK",
   company: "Nudj",
   companyUrl: "https://nudj.cx/",
 };
+
+// Professional experience supplied in Zuhayr's CV, October 2026.
+export const experience = [
+  {
+    company: "Nudj",
+    role: "Full-Stack Software Engineer",
+    period: "May 2024 — Present",
+    current: true,
+    summary:
+      "Building across the whole stack at a B2B startup — from data models and APIs to admin tooling and the consumer experience.",
+    highlights: [
+      {
+        title: "AI-native engineering",
+        detail:
+          "Shaped the team’s coding-agent workflow, authored custom skills and guidance, and built a 17-agent automated PR review system around senior-reviewer standards.",
+      },
+      {
+        title: "A framework, from the ground up",
+        detail:
+          "Solo-built a white-label campaign framework in around three months: four pluggable engines, dual authentication, internationalisation, and asynchronous reward distribution.",
+      },
+      {
+        title: "Products that connect",
+        detail:
+          "Delivered Shopify app features, storefront widgets, merchant configuration, incentive automation, and public APIs across React, Remix, and server-side event tracking.",
+      },
+      {
+        title: "Strong foundations",
+        detail:
+          "Hardened multi-tenant access controls, session handling, and draft-resource access, and resolved race conditions in the API caching layer.",
+      },
+    ],
+    tags: ["Next.js", "tRPC", "MongoDB", "TypeScript", "Claude Code"],
+  },
+  {
+    company: "Cub3",
+    role: "Junior Front-End Engineer",
+    period: "Oct 2023 — May 2024",
+    current: false,
+    summary:
+      "Started at the interface. Built responsive product experiences before Cub3 was acquired by Nudj.",
+    highlights: [
+      {
+        title: "Design into production",
+        detail:
+          "Turned Figma designs into responsive React, Next.js, and Tailwind interfaces, with cross-browser and mobile compatibility.",
+      },
+      {
+        title: "Components built to last",
+        detail:
+          "Created reusable cards, modals, carousels, and navigation that carried forward into the post-acquisition codebase.",
+      },
+    ],
+    tags: ["React", "Next.js", "Tailwind CSS", "Component systems"],
+  },
+];
+
+export const education = [
+  {
+    name: "Professional Software Development",
+    institution: "CodeClan",
+    date: "Jun 2023",
+  },
+  {
+    name: "Computer Science",
+    institution: "University of Strathclyde",
+    date: "Sep 2019",
+  },
+];
 
 export type Project = {
   id: string;
